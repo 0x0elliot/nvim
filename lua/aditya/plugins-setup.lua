@@ -62,7 +62,7 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
 
-  use("voldikss/vim-floaterm") -- floating terminal
+	use("voldikss/vim-floaterm") -- floating terminal
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp") -- completion plugin
@@ -117,6 +117,7 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+	use("tpope/vim-fugitive") -- git commands in nvim
 
 	-- copilot
 	use("github/copilot.vim")

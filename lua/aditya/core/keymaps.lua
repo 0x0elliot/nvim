@@ -43,6 +43,8 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
 
 -- floatterm
 keymap.set("n", "<leader>ft", ":FloatermToggle<CR>") -- toggle terminal
+-- lazygit on floatterm
+keymap.set("n", "<leader>lg", ":FloatermNew lazygit<CR>") -- open lazygit in terminal
 
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
@@ -57,6 +59,10 @@ keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git co
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
+-- gitsigns
+keymap.set("n", "<leader>gp", ":lua require'gitsigns'.preview_hunk()<CR>") -- preview git hunk
+keymap.set("n", "<leader>gt", ":lua require'gitsigns'.toggle_current_line_blame()<CR>") -- toggle git blame for current line
+
 -- restart lsp server (not on youtube nvim video)
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary
 
@@ -68,5 +74,3 @@ keymap.set("n", "<leader>reqpy", ":!source .venv/bin/activate && pip install -r 
 
 -- golang
 keymap.set("n", "<leader>go", ":!go run %<CR>") -- run go script
-
-
