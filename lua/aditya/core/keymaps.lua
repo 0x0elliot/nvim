@@ -43,6 +43,7 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>") -- toggle file explorer
 
 -- floatterm
 keymap.set("n", "<leader>ft", ":FloatermToggle<CR>") -- toggle terminal
+
 -- lazygit on floatterm
 keymap.set("n", "<leader>lg", ":FloatermNew lazygit<CR>") -- open lazygit in terminal
 
